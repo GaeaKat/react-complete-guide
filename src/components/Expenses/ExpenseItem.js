@@ -12,17 +12,18 @@ import {Card} from "../UI/Card";
  * @returns {JSX.Element} Component
  * @constructor
  */
-export const ExpenseItem = ({title, amount, date}) => {
-    const [titleProp, setTitle] = useState(title)
+const ExpenseItem = (props) => {
+    const [title, setTitle] = useState(props.title)
+
     const clickHandler = () => {
         setTitle('updated')
     }
     return (
     <Card className="expense-item">
-        <ExpenseDate date={date} />
+        <ExpenseDate date={props.date} />
         <div className="expense-item__description">
-            <h2>{titleProp}</h2>
-            <div className="expense-item__price">${amount}</div>
+            <h2>{title}</h2>
+            <div className="expense-item__price">${props.amount}</div>
         </div>
         <button onClick={clickHandler}>Change Title</button>
     </Card>
@@ -34,3 +35,5 @@ ExpenseItem.propTypes = {
   date: PropTypes.object,
   title: PropTypes.string
 }
+
+export default ExpenseItem

@@ -3,6 +3,7 @@ import {ComponentPreview, Previews} from '@react-buddy/ide-toolbox';
 import {PaletteTree} from './palette';
 import {ExpenseItem} from "../components/Expenses/ExpenseItem";
 import App from "../App";
+import {Expenses} from "../components/Expenses/Expenses";
 
 const ComponentPreviews = () => {
     return (
@@ -12,6 +13,9 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/App">
                 <App/>
+            </ComponentPreview>
+            <ComponentPreview path="/Expenses">
+                <Expenses/>
             </ComponentPreview>
         </Previews>
     );

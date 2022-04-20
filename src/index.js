@@ -5,4 +5,4 @@ import App from './App';
 import {DevSupport} from "@react-buddy/ide-toolbox";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<DevSupport><React.StrictMode><App /></React.StrictMode></DevSupport>);
+root.render(<React.StrictMode><DevSupport><App /></DevSupport></React.StrictMode>);
